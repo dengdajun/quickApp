@@ -28,7 +28,7 @@ after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
 
   #TAG
-   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
 
   # SINGLE_APP SERVICE
   - export SINGLE_APP=sky233/single-app
